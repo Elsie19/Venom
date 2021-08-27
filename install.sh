@@ -58,6 +58,7 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
+Plug 'LunarWatcher/auto-pairs', { 'tag': '*' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
