@@ -91,6 +91,10 @@ set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set t_Co=256                    " Set if term supports 256 colors.
 set nobackup                    " No auto backups
 set noswapfile                  " No swap
+set encoding=utf-8
+" Set hybrid line numbers
+set number relativenumber
+set nu rnu
 
 " NERDTree stuff
 autocmd vimenter * NERDTree | wincmd p
@@ -101,6 +105,10 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=34
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") 
+      \ && b:NERDTree.isTabTree()) | q | endif
+
 EOF
 
 
