@@ -74,10 +74,6 @@ Plug 'lilydjwg/colorizer'
 " Git related stuff
 Plug 'airblade/vim-gitgutter'
 
-" Super advanced debugging
-Plug 'puremourning/vimspector'
-
-
 call plug#end()
 
 " Airline config
@@ -140,8 +136,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
-" Set debugging to vscode style
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 " Very spicy pipe
 let g:indentLine_char = '│'
 EOF
