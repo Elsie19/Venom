@@ -57,6 +57,8 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-fugitive'
 
 " Theme
 Plug 'joshdick/onedark.vim'
@@ -100,8 +102,8 @@ set mouse=a
 " NERDTree stuff
 autocmd vimenter * NERDTree | wincmd p
 map <C-b> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '►'
-let g:NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeDirArrowExpandable = '↦'
+let g:NERDTreeDirArrowCollapsible = '↧'
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
