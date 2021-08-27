@@ -74,13 +74,12 @@ Plug 'lilydjwg/colorizer'
 
 " Git related stuff
 Plug 'airblade/vim-gitgutter'
-Plug 'kdheepak/lazygit.nvim'
 
 " Smooth scrolling
 Plug 'psliwka/vim-smoothie'
 
 " Live website stuff
-Plug 'turbio/bracey.vim'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 call plug#end()
 
@@ -161,12 +160,18 @@ endfunction
 
 " Automatically re-read file if a change was detected outside of vim
 set autoread
+
+" Bracey stuff
+let g:bracey_refresh_on_save = 1
+nnoremap <leader>md :Bracey
+
+" Leader key
+let mapleader = " "
+map <leader>q :q<cr>
 EOF
 
 
 nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python"
 
-cd $HOME/.config/nvim/plugged/bracey.vim
-npm install --prefix server
 fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
