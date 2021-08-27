@@ -74,9 +74,13 @@ Plug 'lilydjwg/colorizer'
 
 " Git related stuff
 Plug 'airblade/vim-gitgutter'
+Plug 'kdheepak/lazygit.nvim'
 
 " Smooth scrolling
 Plug 'psliwka/vim-smoothie'
+
+" Live website stuff
+Plug 'turbio/bracey.vim'
 
 call plug#end()
 
@@ -163,5 +167,6 @@ EOF
 nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python"
 
-
+cd $HOME/.config/nvim/plugged/bracey.vim
+npm install --prefix server
 fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
