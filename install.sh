@@ -106,11 +106,17 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=34
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 EOF
 
 
 nvim -c ":PluginInstall"
-nvim -c ":CocInstall coc-sh coc-java coc-html"
+nvim -c ":CocInstall coc-sh coc-java coc-html coc-python"
