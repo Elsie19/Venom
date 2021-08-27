@@ -141,7 +141,7 @@ let g:indentLine_char = '│'
 EOF
 
 
-nvim -c ":PluginInstall"
+nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python"
 
 
