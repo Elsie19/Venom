@@ -60,6 +60,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
 
 " Theme
 Plug 'joshdick/onedark.vim'
@@ -69,6 +70,12 @@ Plug 'mhinz/vim-startify'
 
 " Hex colors
 Plug 'lilydjwg/colorizer'
+
+" Git related stuff
+Plug 'airblade/vim-gitgutter'
+
+" Super advanced debugging
+Plug 'puremourning/vimspector'
 
 
 call plug#end()
@@ -89,7 +96,7 @@ let g:startify_custom_header =
 " Set find and replace to a more easy system
 nnoremap S :%s//g<Left><Left>
 
-set backspace=indent,eol,start
+set backspace=indent,eol,start  " Make backspace work
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set t_Co=256                    " Set if term supports 256 colors.
 set nobackup                    " No auto backups
@@ -98,6 +105,7 @@ set encoding=utf-8
 " Set hybrid line numbers
 set number relativenumber
 set nu rnu
+" allow mouse use in vim
 set mouse=a
 
 " NERDTree stuff
@@ -132,6 +140,10 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
+" Set debugging to vscode style
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+" Very spicy pipe
+let g:indentLine_char = '│'
 EOF
 
 
