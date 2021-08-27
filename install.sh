@@ -74,6 +74,9 @@ Plug 'lilydjwg/colorizer'
 " Git related stuff
 Plug 'airblade/vim-gitgutter'
 
+" Smooth scrolling
+Plug 'psliwka/vim-smoothie'
+
 call plug#end()
 
 " Airline config
@@ -138,6 +141,21 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ }
 " Very spicy pipe
 let g:indentLine_char = '│'
+
+" K shows docs
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Automatically re-read file if a change was detected outside of vim
+set autoread
 EOF
 
 
