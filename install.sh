@@ -95,16 +95,18 @@ set encoding=utf-8
 " Set hybrid line numbers
 set number relativenumber
 set nu rnu
+set mouse=a
 
 " NERDTree stuff
 autocmd vimenter * NERDTree | wincmd p
-map <C-n> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=34
+let g:NERDTreeMouseMode=2
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
