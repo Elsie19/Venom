@@ -111,13 +111,13 @@ set mouse=a
 " NERDTree stuff
 autocmd vimenter * NERDTree | wincmd p
 map <C-b> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '↦'
-let g:NERDTreeDirArrowCollapsible = '↧'
+let g:NERDTreeDirArrowExpandable = '►'
+let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=34
-let g:NERDTreeMouseMode=2
+let g:NERDTreeMouseMode=3
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
@@ -149,3 +149,6 @@ EOF
 
 nvim -c ":PluginInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python"
+
+
+fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
