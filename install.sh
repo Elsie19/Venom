@@ -94,6 +94,7 @@ let g:airline_theme='palenight'
 syntax on
 set background=dark
 colorscheme palenight
+set termguicolors
 
 let g:startify_custom_header =
         \ startify#pad(split(system('figlet -t -c "Hello Hepno"'), '\n'))
@@ -165,7 +166,7 @@ set autoread
 
 " Bracey stuff
 let g:bracey_refresh_on_save = 1
-nnoremap <leader>md :Bracey
+nnoremap m :Bracey<CR>
 
 " Leader key
 let mapleader = " "
