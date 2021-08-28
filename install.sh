@@ -27,7 +27,7 @@ function fancy_message() {
 
 fancy_message info "Hepno, this script will destroy vscode if installed ;) /s"
 
-sudo pacman -S --noconfirm figlet nodejs npm shellcheck
+sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -199,7 +199,7 @@ nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python coc-css coc-omnisharp"
 echo '"diagnostic.displayByAle": true' > $HOME/.config/nvim/coc-settings.json
 if command -v paru &>/dev/null; then
-    paru -S nerd-fonts-fira-code
+    paru -S nerd-fonts-fira-code csslint
     exit
 fi
 fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
