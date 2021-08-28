@@ -62,8 +62,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
 " Other stuff
 Plug 'tpope/vim-surround'
-" Pair quotes and stuff
-Plug 'LunarWatcher/auto-pairs', { 'tag': '*' }
+" Matcher stuff
+Plug 'tmsvg/pear-tree'
 " Spicy icons
 Plug 'ryanoasis/vim-devicons'
 " Set lines during indents
