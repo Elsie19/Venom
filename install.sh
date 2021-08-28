@@ -200,4 +200,8 @@ EOF
 nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python coc-css coc-omnisharp"
 
+if command -v paru &>/dev/null; then
+    paru -S nerd-fonts-fira-code
+    exit
+fi
 fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
