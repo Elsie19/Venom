@@ -23,7 +23,7 @@ function fancy_message() {
 
 fancy_message info "Hepno, this script will destroy vscode if installed ;) /s"
 
-sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
+sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -84,6 +84,8 @@ Plug 'lilydjwg/colorizer'
 Plug 'airblade/vim-gitgutter'
 " git so good, it's illegal
 Plug 'tpope/vim-fugitive'
+" Lazygit
+Plug 'kdheepak/lazygit.nvim'
 
 " Smooth scrolling
 Plug 'psliwka/vim-smoothie'
@@ -189,6 +191,9 @@ let g:indentLine_leadingSpaceEnabled = 0
 
 " make supertab go from top to bottom
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" Lazygit
+nnoremap <leader>g :LazyGit<CR>
 EOF
 
 # Install the plugins and CoC stuff
