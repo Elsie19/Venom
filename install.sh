@@ -27,7 +27,7 @@ function fancy_message() {
 
 fancy_message info "Hepno, this script will destroy vscode if installed ;) /s"
 
-sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint
+sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint prettier
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
