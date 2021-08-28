@@ -72,6 +72,7 @@ Plug 'dense-analysis/ale'
 " Theme
 Plug 'joshdick/onedark.vim'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'sickill/vim-monokai'
 
 " Start
 Plug 'mhinz/vim-startify'
