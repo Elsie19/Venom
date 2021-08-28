@@ -5,3 +5,10 @@
 ```bash
 curl -s https://raw.githubusercontent.com/Henryws/HepVim/master/install.sh > install.sh; chmod +x install.sh; ./install.sh
 ```
+
+## Useful keybindings
+* `S` will initiate a find and replace
+* `<leader>g` will open a lazygit window if your inside a git directory (press `a` to add files `c` to commit them, and `P` to push them)
+* `<ctrl>b` will toggle the file tree
+* `<leader>m` will start and open a web browser so you can live edit html/css/js files
+* `<ctrl>p` will open a fuzzy/file/buffer/tag finder
