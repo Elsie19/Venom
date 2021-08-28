@@ -65,6 +65,7 @@ Plug 'Yggdroot/indentLine'
 
 " Theme
 Plug 'joshdick/onedark.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Start
 Plug 'mhinz/vim-startify'
@@ -81,17 +82,20 @@ Plug 'psliwka/vim-smoothie'
 " Live website stuff
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
+" Ctrl P (fuzzy finder)
+Plug 'ctrlpvim/ctrlp.vim'
+
 call plug#end()
 
 " Airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='palenight'
 
 " Theming
 syntax on
 set background=dark
-colorscheme onedark
+colorscheme palenight
 
 let g:startify_custom_header =
         \ startify#pad(split(system('figlet -t -c "Hello Hepno"'), '\n'))
@@ -168,6 +172,10 @@ nnoremap <leader>md :Bracey
 " Leader key
 let mapleader = " "
 map <leader>q :q<cr>
+
+" ctrl P stuff
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 EOF
 
 
