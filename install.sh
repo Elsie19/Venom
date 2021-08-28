@@ -186,10 +186,13 @@ map <leader>q :q<cr>
 " ctrl P stuff
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+let g:indentLine_fileTypeExclude = ['startify']
+let g:indentLine_leadingSpaceEnabled = 0
 EOF
 
 
 nvim -c ":PlugInstall"
-nvim -c ":CocInstall coc-sh coc-java coc-html coc-python"
+nvim -c ":CocInstall coc-sh coc-java coc-html coc-python coc-css coc-omnisharp"
 
 fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
