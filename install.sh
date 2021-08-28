@@ -21,8 +21,6 @@ function fancy_message() {
     esac
 }
 
-fancy_message info "Hepno, this script will destroy vscode if installed ;) /s"
-
 sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
