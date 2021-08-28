@@ -109,7 +109,7 @@ colorscheme palenight
 set termguicolors
 
 let g:startify_custom_header =
-        \ startify#pad(split(system('figlet -t -c "Hello Hepno"'), '\n'))
+        \ startify#pad(split(system('figlet -t -c "Venom"'), '\n'))
 
 " Set find and replace to a more easy system
 nnoremap S :%s//g<Left><Left>
