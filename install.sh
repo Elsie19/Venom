@@ -131,11 +131,12 @@ map <C-b> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowLineNumbers=0
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
-let g:NERDTreeWinSize=34
-let g:NERDTreeMouseMode=3
+let g:NERDTreeWinSize = 34
+let g:NERDTreeMouseMode = 3
 
+" Automatically exit neovim if the last window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 
@@ -187,11 +188,15 @@ map <leader>q :q<cr>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" Fix startify indent lines
 let g:indentLine_fileTypeExclude = ['startify']
 let g:indentLine_leadingSpaceEnabled = 0
+
+" make supertab go from top to bottom
+let g:SuperTabDefaultCompletionType = "<c-n>"
 EOF
 
-
+# Install the plugins and CoC stuff
 nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python coc-css coc-omnisharp"
 
