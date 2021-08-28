@@ -33,6 +33,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 cat <<EOF > $HOME/.config/nvim/init.vim
+
+let g:ale_disable_lsp = 1
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -68,6 +70,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 " Highlights matching sets
 Plug 'andymass/vim-matchup'
+" Linting
+Plug 'dense-analysis/ale'
 
 " Theme
 Plug 'joshdick/onedark.vim'
@@ -199,7 +203,7 @@ EOF
 # Install the plugins and CoC stuff
 nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-python coc-css coc-omnisharp"
-
+echo '"diagnostic.displayByAle": true' > $HOME/.config/nvim/coc-settings.json
 if command -v paru &>/dev/null; then
     paru -S nerd-fonts-fira-code
     exit
