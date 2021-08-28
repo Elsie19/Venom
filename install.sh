@@ -27,7 +27,7 @@ function fancy_message() {
 
 fancy_message info "Hepno, this script will destroy vscode if installed ;) /s"
 
-sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint python-pylint # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint and python-pylint for ALE
+sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -196,7 +196,7 @@ EOF
 
 # Install the plugins and CoC stuff
 nvim -c ":PlugInstall"
-nvim -c ":CocInstall coc-sh coc-java coc-html coc-python coc-css coc-omnisharp"
+nvim -c ":CocInstall coc-sh coc-java coc-html coc-css coc-omnisharp"
 npm install --save-dev htmlhint
 echo '"diagnostic.displayByAle": true' > $HOME/.config/nvim/coc-settings.json
 if command -v paru &>/dev/null; then
