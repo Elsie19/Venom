@@ -194,6 +194,8 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Lazygit
 nnoremap <leader>g :LazyGit<CR>
+
+let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯']
 EOF
 
 # Install the plugins and CoC stuff
