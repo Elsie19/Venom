@@ -30,7 +30,7 @@ fancy_message info "Hepno, this script will destroy vscode if installed ;) /s"
 sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 cat <<EOF > $HOME/.config/nvim/init.vim
 
@@ -121,7 +121,7 @@ set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set t_Co=256                    " Set if term supports 256 colors.
 set nobackup                    " No auto backups
 set noswapfile                  " No swap
-set encoding=utf-8
+set encoding=utf-8              " Set encoding to the one true format
 " Set hybrid line numbers
 set number relativenumber
 set nu rnu
