@@ -79,6 +79,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 
 " Start
 Plug 'mhinz/vim-startify'
+Plug 'pbrisbin/vim-mkdir'
 
 " Hex colors
 Plug 'lilydjwg/colorizer'
