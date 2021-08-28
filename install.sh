@@ -27,7 +27,7 @@ function fancy_message() {
 
 fancy_message info "Hepno, this script will destroy vscode if installed ;) /s"
 
-sudo pacman -S --noconfirm figlet nodejs npm
+sudo pacman -S --noconfirm figlet nodejs npm shellcheck
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -143,12 +143,6 @@ let g:NERDTreeMouseMode = 3
 " Automatically exit neovim if the last window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'✹',
