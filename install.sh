@@ -138,6 +138,8 @@ let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize = 34
 let g:NERDTreeMouseMode = 3
+" Hide certain folders
+let NERDTreeIgnore=['\.git$', '\.idea$', '\.vscode$', '\.history$']
 
 " Automatically exit neovim if the last window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
