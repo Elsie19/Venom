@@ -48,18 +48,26 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ervandew/supertab'
 
 " emmet
 Plug 'mattn/emmet-vim'
 
 " Syntax stuff
+" Check for invalid syntax
 Plug 'vim-syntastic/syntastic'
+" Small language server
 Plug 'sheerun/vim-polyglot'
+" Other stuff
 Plug 'tpope/vim-surround'
+" Pair quotes and stuff
 Plug 'LunarWatcher/auto-pairs', { 'tag': '*' }
+" Spicy icons
 Plug 'ryanoasis/vim-devicons'
-Plug 'tpope/vim-fugitive'
+" Set lines during indents
 Plug 'Yggdroot/indentLine'
+" Highlights matching sets
+Plug 'andymass/vim-matchup'
 
 " Theme
 Plug 'joshdick/onedark.vim'
@@ -73,6 +81,8 @@ Plug 'lilydjwg/colorizer'
 
 " Git related stuff
 Plug 'airblade/vim-gitgutter'
+" git so good, it's illegal
+Plug 'tpope/vim-fugitive'
 
 " Smooth scrolling
 Plug 'psliwka/vim-smoothie'
@@ -113,13 +123,14 @@ set number relativenumber
 set nu rnu
 " allow mouse use in vim
 set mouse=a
+set t_Co=256
 
 " NERDTree stuff
 autocmd vimenter * NERDTree | wincmd p
 map <C-b> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeShowLineNumbers=1
+let NERDTreeShowLineNumbers=0
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=34
