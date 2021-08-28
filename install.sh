@@ -4,14 +4,10 @@
 
 export NC='\033[0m'
 # Bold
-export BBlack='\033[1;30m'       # Black
 export BRed='\033[1;31m'         # Red
 export BGreen='\033[1;32m'       # Green
 export BYellow='\033[1;33m'      # Yellow
-export BBlue='\033[1;34m'        # Blue
-export BPurple='\033[1;35m'      # Purple
 export BCyan='\033[1;36m'        # Cyan
-export BWhite='\033[1;37m'       # White
 
 function fancy_message() {
     local MESSAGE_TYPE="${1}"
