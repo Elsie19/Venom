@@ -75,6 +75,7 @@ Plug 'dense-analysis/ale'
 Plug 'joshdick/onedark.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'sickill/vim-monokai'
+Plug 'connorholyday/vim-snazzy'
 
 " Start
 Plug 'mhinz/vim-startify'
