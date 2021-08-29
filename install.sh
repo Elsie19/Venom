@@ -25,6 +25,8 @@ sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint lazygit # figlet 
 # download vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+mkdir -p $HOME/.local/share/fonts
+curl -s https://raw.githubusercontent.com/xero/figlet-fonts/master/3d.flf > $HOME/.local/share/fonts/3d.flf
 
 cat <<EOF > $HOME/.config/nvim/init.vim
 
@@ -109,7 +111,7 @@ colorscheme palenight
 set termguicolors
 
 let g:startify_custom_header =
-        \ startify#pad(split(system('figlet -t -c "Venom"'), '\n'))
+        \ startify#pad(split(system('figlet -t -c -f ~/.local/share/fonts/3d.flf "Venom"'), '\n'))
 
 " Set find and replace to a more easy system
 nnoremap S :%s//g<Left><Left>
