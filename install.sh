@@ -70,6 +70,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'andymass/vim-matchup'
 " Linting
 Plug 'dense-analysis/ale'
+Plug 'habamax/vim-godot'
 
 " Theme
 Plug 'joshdick/onedark.vim'
@@ -115,6 +116,7 @@ set termguicolors
 
 let g:startify_custom_header =
         \ startify#pad(split(system('cat $HOME/.local/share/venom/ascii.txt'), '\n'))
+let g:startify_custom_footer = 'Venom 1.2 Stonefish'
 
 " Set find and replace to a more easy system
 nnoremap S :%s//g<Left><Left>
@@ -202,13 +204,42 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 nnoremap <leader>g :LazyGit<CR>
 
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯']
+
+" to use folding provided by vim-godot
+setlocal foldmethod=expr
+setlocal tabstop=4
+nnoremap <buffer> <F4> :GodotRunLast<CR>
+nnoremap <buffer> <F5> :GodotRun<CR>
+nnoremap <buffer> <F6> :GodotRunCurrent<CR>
+nnoremap <buffer> <F7> :GodotRunFZF<CR>
+
+" Allow ALE to autoimport completion entries from LSP servers
+let g:ale_completion_autoimport = 1
+
+" Register LSP server for Godot:
+call ale#linter#Define('gdscript', {
+\   'name': 'godot',
+\   'lsp': 'socket',
+\   'address': '127.0.0.1:6008',
+\   'project_root': 'project.godot',
+\})
 EOF
 
 # Install the plugins and CoC stuff
 nvim -c ":PlugInstall"
 nvim -c ":CocInstall coc-sh coc-java coc-html coc-css coc-omnisharp"
 npm install --save-dev htmlhint
-echo '"diagnostic.displayByAle": true' > $HOME/.config/nvim/coc-settings.json
+# this will hook into godot (if running, and provide the language server)
+echo '{
+    "languageserver": {
+        "godot": {
+            "host": "127.0.0.1",
+            "filetypes": ["gdscript"],
+            "port": 6008
+        }
+    }
+}
+' > $HOME/.config/nvim/coc-settings.json
 if command -v paru &>/dev/null; then
     paru -S nerd-fonts-fira-code csslint
     exit
