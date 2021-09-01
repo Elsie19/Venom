@@ -12,4 +12,4 @@ bash -c "$(curl -s https://raw.githubusercontent.com/Henryws/Venom/master/instal
 * `<ctrl>b` will toggle the file tree
 * `<leader>m` will start and open a web browser so you can live edit html/css/js files
 * `<ctrl>p` will open a fuzzy/file/buffer/tag finder
-* `<leader>c<leader>` will comment out lines in visual mode`
+* `<leader>c<leader>` will comment out lines in visual mode
