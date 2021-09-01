@@ -71,6 +71,8 @@ Plug 'andymass/vim-matchup'
 " Linting
 Plug 'dense-analysis/ale'
 Plug 'habamax/vim-godot'
+" Commenter
+Plug 'preservim/nerdcommenter'
 
 " Theme
 Plug 'joshdick/onedark.vim'
@@ -116,7 +118,7 @@ set termguicolors
 
 let g:startify_custom_header =
         \ startify#pad(split(system('cat $HOME/.local/share/venom/ascii.txt'), '\n'))
-let g:startify_custom_footer = startify#center(split(system('echo Venom 1.2 Stonefish'), '\n'))
+let g:startify_custom_footer = startify#center(split(system('echo Venom 1.3 Fugu'), '\n'))
 
 " Set find and replace to a more easy system
 nnoremap S :%s//g<Left><Left>
@@ -223,6 +225,34 @@ call ale#linter#Define('gdscript', {
 \   'address': '127.0.0.1:6008',
 \   'project_root': 'project.godot',
 \})
+
+" NERDCommenter
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 EOF
 
 # Install the plugins and CoC stuff
