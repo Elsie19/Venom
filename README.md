@@ -3,7 +3,7 @@
 
 ## Install
 ```bash
-bash -c "$(curl -s https://raw.githubusercontent.com/Henryws/Venom/master/install.sh)"
+curl -s https://raw.githubusercontent.com/Henryws/Venom/master/install.sh | bash
 ```
 
 ## Useful keybindings
