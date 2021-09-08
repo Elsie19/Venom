@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Hepno...
-
 export NC='\033[0m'
 # Bold
 export BRed='\033[1;31m'         # Red
