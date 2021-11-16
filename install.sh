@@ -32,6 +32,7 @@ curl -s https://raw.githubusercontent.com/Henryws/Venom/master/ascii.txt > $HOME
 
 cat <<EOF > $HOME/.config/venom/init.vim
 
+runtimepath=~/.config/venom
 let g:ale_disable_lsp = 1
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
