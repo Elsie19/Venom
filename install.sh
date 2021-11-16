@@ -23,21 +23,20 @@ fancy_message warn "You will need neovim 0.5.0 or higher for some features to wo
 sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 # download vim plug
 mkdir -p $HOME/.config/nvim
-mkdir -p $HOME/.config/venom
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 mkdir -p $HOME/.local/share/fonts
 mkdir -p $HOME/.local/share/venom
 curl -s https://raw.githubusercontent.com/Henryws/Venom/master/ascii.txt > $HOME/.local/share/venom/ascii.txt
 
-cat <<EOF > $HOME/.config/venom/init.vim
+cat <<EOF > $HOME/.config/nvim/init.vim
 
 runtimepath=~/.config/venom
 let g:ale_disable_lsp = 1
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.config/venom/plugged')
+call plug#begin()
 
 " Fancy bar
 Plug 'vim-airline/vim-airline'
@@ -278,8 +277,3 @@ if command -v paru &>/dev/null; then
     exit
 fi
 fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
-mkdir -p $HOME/.local/bin
-cat <<EOF > $HOME/.local/bin/venom
-#!/bin/sh
-nvim -u $HOME/.config/venom/init.vim "$@"
-EOF
