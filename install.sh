@@ -20,7 +20,7 @@ function fancy_message() {
 }
 
 fancy_message warn "You will need neovim 0.5.0 or higher for some features to work"
-sudo pacman -S --noconfirm figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
+sudo pacman -S --noconfirm python-pyflakes figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 # download vim plug
 mkdir -p $HOME/.config/nvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -147,7 +147,7 @@ let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize = 34
 let g:NERDTreeMouseMode = 3
 " Hide certain folders
-let NERDTreeIgnore=['\.git$', '\.idea$', '\.vscode$', '\.history$']
+let NERDTreeIgnore=['\.git$', '\.idea$', '\.vscode$', '\.history$', 'startify']
 
 " Automatically exit neovim if the last window is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
@@ -194,6 +194,9 @@ map <leader>q :q<cr>
 " ctrl P stuff
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Set proper python linter
+let g:syntastic_python_checkers = ['pyflakes']
 
 " Fix startify indent lines
 let g:indentLine_fileTypeExclude = ['startify']
