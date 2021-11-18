@@ -22,14 +22,14 @@ function fancy_message() {
 fancy_message warn "You will need neovim 0.5.0 or higher for some features to work"
 sudo pacman -S --noconfirm python-pyflakes figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 # download vim plug
-mkdir -p $HOME/.config/nvim
+mkdir -pv $HOME/.config/nvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-mkdir -p $HOME/.local/share/fonts
-mkdir -p $HOME/.local/share/venom
+mkdir -pv $HOME/.local/share/fonts
+mkdir -pv $HOME/.local/share/venom
 curl -s https://raw.githubusercontent.com/Henryws/Venom/master/ascii.txt > $HOME/.local/share/venom/ascii.txt
 
-curl -fLo "${HOME:-~}/.config/nvim/initvim" --create-dirs \
+curl -fLo "${HOME:-~}/.config/nvim/init.vim" --create-dirs \
     https://raw.githubusercontent.com/Henryws/Venom/master/init.vim
 # Install the plugins and CoC stuff
 nvim -c ":PlugInstall"
