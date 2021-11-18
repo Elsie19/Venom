@@ -49,5 +49,6 @@ echo '{
 if command -v paru &>/dev/null; then
     paru -S nerd-fonts-fira-code csslint
     exit
+else
+    fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
 fi
-fancy_message info "You should really install a nerd font for superior fonts (try ${BCyan}nerd-fonts-fira-code${NC} from the AUR)"
