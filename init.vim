@@ -68,7 +68,7 @@ colorscheme palenight
 set termguicolors
 let g:startify_custom_header =
         \ startify#pad(split(system('cat $HOME/.local/share/venom/ascii.txt'), '\n'))
-let g:startify_custom_footer = startify#center(split(system('echo Venom 1.3 Fugu'), '\n'))
+let g:startify_custom_footer = startify#center(split(system('echo Venom 1.4 Hydra'), '\n'))
 " Set find and replace to a more easy system
 nnoremap S :%s//g<Left><Left>
 set backspace=indent,eol,start  " Make backspace work
