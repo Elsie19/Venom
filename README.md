@@ -14,6 +14,6 @@ curl -s https://raw.githubusercontent.com/Henryws/Venom/master/install.sh | bash
 * `<ctrl>p` will open a fuzzy/file/buffer/tag finder
 * `<leader>c<leader>` will comment out lines in visual mode
 * Press <kbd>F8</kbd> to run python code
-* 
+
 ## Other information
 * If you wish to use Venom and Godot, simply open godot in the background, open your project, then start editing in a separate window in Venom, and autocompletions and all that good stuff should start working
