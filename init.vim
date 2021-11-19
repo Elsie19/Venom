@@ -39,6 +39,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'sickill/vim-monokai'
 Plug 'connorholyday/vim-snazzy'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 " Start
 Plug 'mhinz/vim-startify'
 Plug 'pbrisbin/vim-mkdir'
@@ -60,11 +61,11 @@ call plug#end()
 " Airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='palenight'
+let g:airline_theme='challenger_deep'
 " Theming
 syntax on
 set background=dark
-colorscheme palenight
+colorscheme challenger_deep
 set termguicolors
 let g:startify_custom_header =
         \ startify#pad(split(system('cat $HOME/.local/share/venom/ascii.txt'), '\n'))
