@@ -20,7 +20,15 @@ function fancy_message() {
 }
 
 fancy_message warn "You will need neovim 0.5.0 or higher for some features to work"
-sudo pacman -S --noconfirm python-pyflakes figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
+
+program() { [ -x "$(which $1)" ] }
+
+if program pacman; then
+    sudo pacman -S --noconfirm python-pyflakes figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
+elif program apt-get; then
+    sudo apt-get install pyflakes figlet nodejs npm shellcheck eslint
+fi
+
 # download vim plug
 mkdir -pv $HOME/.config/nvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
