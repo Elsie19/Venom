@@ -13,7 +13,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ervandew/supertab'
 " emmet
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['html'] }
 " Syntax stuff
 " Check for invalid syntax
 Plug 'vim-syntastic/syntastic'
