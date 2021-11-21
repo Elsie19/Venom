@@ -153,6 +153,8 @@ nnoremap <buffer> <F4> :GodotRunLast<CR>
 nnoremap <buffer> <F5> :GodotRun<CR>
 nnoremap <buffer> <F6> :GodotRunCurrent<CR>
 nnoremap <buffer> <F7> :GodotRunFZF<CR>
+
+let g:coc_global_extensions = ['coc-sh', 'coc-git', 'coc-java']
 " Allow ALE to autoimport completion entries from LSP servers
 let g:ale_completion_autoimport = 1
 " Register LSP server for Godot:
