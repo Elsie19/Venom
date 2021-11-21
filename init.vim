@@ -67,6 +67,7 @@ syntax on
 set background=dark
 colorscheme challenger_deep
 set termguicolors
+set cursorline
 let g:startify_custom_header =
         \ startify#pad(split(system('cat $HOME/.local/share/venom/ascii.txt'), '\n'))
 let g:startify_custom_footer = startify#center(split(system('echo Venom 1.4 Hydra'), '\n'))
