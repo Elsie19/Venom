@@ -22,7 +22,7 @@ function fancy_message() {
 fancy_message warn "You will need neovim 0.5.0 or higher for some features to work"
 
 program() {
-    [ -x "$(which $1)" ]
+    [[ -x "$(which $1)" ]]
 }
 
 if program pacman; then
