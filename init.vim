@@ -88,7 +88,7 @@ set mouse=a
 set shortmess=a
 
 " NERDTree stuff
-if filereadable("~/.config/nvim/plugged/nerdtree/plugin/NERD_tree.vim")
+if exists('g:plugs["nerdtree"]')
   silent! autocmd vimenter * NERDTree | wincmd p
 endif
 map <C-b> :NERDTreeToggle<CR>
