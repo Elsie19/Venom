@@ -84,6 +84,8 @@ set number relativenumber
 set nu rnu
 " allow mouse use in vim
 set mouse=a
+" Ignore Hit ENTER or type command to continue
+set shortmess=a
 
 " NERDTree stuff
 silent! autocmd vimenter * NERDTree | wincmd p
