@@ -57,6 +57,8 @@ Plug 'psliwka/vim-smoothie'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 " Ctrl P (fuzzy finder)
 Plug 'ctrlpvim/ctrlp.vim'
+" Context during loops and stuff
+Plug 'wellle/context.vim'
 call plug#end()
 " Airline config
 let g:airline#extensions#tabline#enabled = 1
