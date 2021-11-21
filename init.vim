@@ -84,7 +84,7 @@ set number relativenumber
 set nu rnu
 " allow mouse use in vim
 set mouse=a
-set t_Co=256
+
 " NERDTree stuff
 autocmd vimenter * NERDTree | wincmd p
 map <C-b> :NERDTreeToggle<CR>
