@@ -88,7 +88,9 @@ set mouse=a
 set shortmess=a
 
 " NERDTree stuff
-silent! autocmd vimenter * NERDTree | wincmd p
+if filereadable("~/.config/nvim/plugged/nerdtree/plugin/NERD_tree.vim")
+  silent! autocmd vimenter * NERDTree | wincmd p
+endif
 map <C-b> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
