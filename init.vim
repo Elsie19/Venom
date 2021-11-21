@@ -34,11 +34,9 @@ Plug 'dense-analysis/ale'
 Plug 'habamax/vim-godot'
 " Commenter
 Plug 'preservim/nerdcommenter'
-" Theme
-Plug 'joshdick/onedark.vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'sickill/vim-monokai'
-Plug 'connorholyday/vim-snazzy'
+" Light theme
+Plug 'adigitoleo/vim-mellow'
+" Dark (default) theme
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 " Start
 Plug 'mhinz/vim-startify'
