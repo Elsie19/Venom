@@ -86,7 +86,7 @@ set nu rnu
 set mouse=a
 
 " NERDTree stuff
-autocmd vimenter * NERDTree | wincmd p
+silent! autocmd vimenter * NERDTree | wincmd p
 map <C-b> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '►'
 let g:NERDTreeDirArrowCollapsible = '▼'
@@ -98,7 +98,7 @@ let g:NERDTreeMouseMode = 3
 " Hide certain folders
 let NERDTreeIgnore=['\.git$', '\.idea$', '\.vscode$', '\.history$', 'startify']
 " Automatically exit neovim if the last window is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
+silent! autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'✹',
