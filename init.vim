@@ -151,12 +151,17 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 nnoremap <leader>g :LazyGit<CR>
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯']
 " to use folding provided by vim-godot
-setlocal foldmethod=expr
-setlocal tabstop=4
-nnoremap <buffer> <F4> :GodotRunLast<CR>
-nnoremap <buffer> <F5> :GodotRun<CR>
-nnoremap <buffer> <F6> :GodotRunCurrent<CR>
-nnoremap <buffer> <F7> :GodotRunFZF<CR>
+func! GodotSettings() abort
+  setlocal foldmethod=expr
+  setlocal tabstop=4
+  nnoremap <buffer> <F4> :GodotRunLast<CR>
+  nnoremap <buffer> <F5> :GodotRun<CR>
+  nnoremap <buffer> <F6> :GodotRunCurrent<CR>
+  nnoremap <buffer> <F7> :GodotRunFZF<CR>
+endfunction
+augroup godot | au!
+  au FileType gdscript call GodotSettings()
+augroup end
 
 let g:coc_global_extensions = ['coc-sh', 'coc-git', 'coc-java']
 " Allow ALE to autoimport completion entries from LSP servers
