@@ -58,6 +58,18 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Context during loops and stuff
 Plug 'wellle/context.vim'
 call plug#end()
+
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
 " Airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -193,3 +205,5 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
 imap <F8> <Esc>:w<CR>:!clear;python3 %<CR>
+
+command VenomUpdate execute "!curl -s https://raw.githubusercontent.com/Henryws/Venom/master/init.vim > ~/.config/nvim/init.vim"
