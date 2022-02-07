@@ -16,6 +16,7 @@ Plug 'ervandew/supertab'
 Plug 'mattn/emmet-vim', { 'for': ['html'] }
 " Syntax stuff
 " Check for invalid syntax
+Plug 'rust-lang/rust.vim', { 'for': 'rs' }
 Plug 'vim-syntastic/syntastic'
 " Small language server
 Plug 'sheerun/vim-polyglot'
@@ -132,6 +133,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:indentLine_char = '│'
 " K shows docs
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nmap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
