@@ -43,7 +43,7 @@ curl -fLo "${HOME:-~}/.config/nvim/init.vim" --create-dirs \
     https://raw.githubusercontent.com/Henryws/Venom/master/init.vim
 # Install the plugins and CoC stuff
 nvim -c ":PlugInstall|qa!"
-nvim -c "CocInstall -sync coc-sh coc-java coc-html coc-css coc-omnisharp|q"
+nvim -c "CocInstall -sync coc-sh coc-java coc-html coc-css coc-omnisharp coc-tsserver|q"
 npm install --save-dev htmlhint
 # this will hook into godot (if running, and provide the language server)
 echo '{
@@ -54,6 +54,7 @@ echo '{
             "port": 6008
         }
     }
+    "coc.preferences.jumpCommand": "tabe"
 }
 ' > "${HOME:-~}"/.config/nvim/coc-settings.json
 if command -v paru &>/dev/null; then

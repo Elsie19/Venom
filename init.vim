@@ -132,7 +132,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " Very spicy pipe
 let g:indentLine_char = '│'
 " K shows docs
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call CocAction('jumpDefinition', 'drop')<CR>
 nmap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -145,6 +145,8 @@ function! s:show_documentation()
 endfunction
 " Automatically re-read file if a change was detected outside of vim
 set autoread
+" Set the default shell to run commands from
+set shell=bash
 " Bracey stuff
 let g:bracey_refresh_on_save = 1
 nnoremap m :Bracey<CR>
