@@ -153,6 +153,11 @@ nnoremap m :Bracey<CR>
 " Leader key
 let mapleader = " "
 map <leader>q :q<cr>
+" Snip run
+nmap <leader>ff <Plug>SnipRun
+nmap <leader>f <Plug>SnipRunOperator
+vmap f <Plug>SnipRun
+
 " ctrl P stuff
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
