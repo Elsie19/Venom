@@ -19,7 +19,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html'] }
 Plug 'rust-lang/rust.vim', { 'for': 'rs' }
 Plug 'vim-syntastic/syntastic'
 " Small language server
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot', {'commit': '2c5af8f89d3e61e04e761c07a1f043b0f35203c6'}
 " Other stuff
 Plug 'tpope/vim-surround'
 " Matcher stuff

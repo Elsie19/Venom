@@ -53,7 +53,7 @@ echo '{
             "filetypes": ["gdscript"],
             "port": 6008
         }
-    }
+    },
     "coc.preferences.jumpCommand": "tabe"
 }
 ' > "${HOME:-~}"/.config/nvim/coc-settings.json
