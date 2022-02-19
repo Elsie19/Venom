@@ -22,13 +22,13 @@ function fancy_message() {
 fancy_message warn "You will need neovim 0.5.0 or higher for some features to work"
 
 program() {
-    [[ -x "$(which $1)" ]]
+    [[ -x "$(command -v "$1")" ]]
 }
 
 if program pacman; then
-    sudo pacman -S --noconfirm python-pyflakes figlet nodejs npm shellcheck eslint lazygit # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
+    sudo pacman -Syu --noconfirm python-pyflakes figlet nodejs npm shellcheck eslint lazygit cargo rust # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 elif program apt-get; then
-    sudo apt-get install pyflakes figlet nodejs npm shellcheck eslint
+    sudo apt-get install pyflakes figlet nodejs npm shellcheck eslint rustc
 fi
 
 # download vim plug
