@@ -83,7 +83,7 @@ set termguicolors
 set cursorline
 let g:startify_custom_header =
         \ startify#pad(split(system('cat $HOME/.local/share/venom/ascii.txt'), '\n'))
-let g:startify_custom_footer = startify#center(split(system('echo Venom 1.5 Chimaera'), '\n'))
+let g:startify_custom_footer = startify#center(split(system('echo Venom 1.6 Deathstalker'), '\n'))
 " Set find and replace to a more easy system
 nnoremap S :%s//g<Left><Left>
 set backspace=indent,eol,start  " Make backspace work
