@@ -19,7 +19,9 @@ Plug 'mattn/emmet-vim', { 'for': ['html'] }
 Plug 'rust-lang/rust.vim', { 'for': 'rs' }
 Plug 'vim-syntastic/syntastic'
 " Small language server
-Plug 'sheerun/vim-polyglot', {'commit': '2c5af8f89d3e61e04e761c07a1f043b0f35203c6'}
+Plug 'sheerun/vim-polyglot'
+" Better looking syntax
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Other stuff
 Plug 'tpope/vim-surround'
 " Matcher stuff
@@ -183,6 +185,19 @@ endfunction
 augroup godot | au!
   au FileType gdscript call GodotSettings()
 augroup end
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
 
 let g:coc_global_extensions = ['coc-sh', 'coc-git', 'coc-java']
 " Allow ALE to autoimport completion entries from LSP servers
