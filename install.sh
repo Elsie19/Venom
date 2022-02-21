@@ -48,8 +48,9 @@ curl -fLo "${HOME:-~}/.config/nvim/init.vim" --create-dirs \
     https://raw.githubusercontent.com/Henryws/Venom/master/init.vim
 # Install the plugins and CoC stuff
 nvim -c ":PlugInstall|qa!"
-nvim -c "CocInstall -sync coc-sh coc-java coc-html coc-css coc-omnisharp coc-tsserver|q"
-nvim -c "TSInstall lua bash vim|q"
+nvim +'CocInstall -sync coc-sh coc-java coc-html coc-css coc-omnisharp coc-tsserver' +qall
+nvim -c 'TSInstall lua bash vim' \
+    -c 'qa!'
 npm install --save-dev htmlhint
 # this will hook into godot (if running, and provide the language server)
 echo '{
