@@ -120,17 +120,17 @@ let NERDTreeIgnore=['\.git$', '\.idea$', '\.vscode$', '\.history$', 'startify']
 silent! autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")
       \ && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
+      \ 'Modified'  :'✹',
+      \ 'Staged'    :'✚',
+      \ 'Untracked' :'✭',
+      \ 'Renamed'   :'➜',
+      \ 'Unmerged'  :'═',
+      \ 'Deleted'   :'✖',
+      \ 'Dirty'     :'✗',
+      \ 'Ignored'   :'☒',
+      \ 'Clean'     :'✔︎',
+      \ 'Unknown'   :'?',
+      \ }
 " Very spicy pipe
 let g:indentLine_char = '│'
 " K shows docs
@@ -204,11 +204,11 @@ let g:coc_global_extensions = ['coc-sh', 'coc-git', 'coc-java']
 let g:ale_completion_autoimport = 1
 " Register LSP server for Godot:
 call ale#linter#Define('gdscript', {
-\   'name': 'godot',
-\   'lsp': 'socket',
-\   'address': '127.0.0.1:6008',
-\   'project_root': 'project.godot',
-\})
+  \   'name': 'godot',
+  \   'lsp': 'socket',
+  \   'address': '127.0.0.1:6008',
+  \   'project_root': 'project.godot',
+  \})
 " NERDCommenter
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
