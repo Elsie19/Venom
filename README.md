@@ -12,6 +12,7 @@ curl -s https://raw.githubusercontent.com/Henryws/Venom/master/install.sh | bash
 * `<leader>g` will open a lazygit window if your inside a git directory (press `a` to add files `c` to commit them, and `P` to push them)
 * `<ctrl>b` will toggle the file tree
 * `<leader>m` will start and open a web browser so you can live edit html/css/js files
+* Press `<leader> c` when editing a markdown file to live edit
 * `<ctrl>p` will open a fuzzy/file/buffer/tag finder
 * `<leader>c<leader>` will comment out lines in visual mode
 * Press <kbd>F8</kbd> to run python code

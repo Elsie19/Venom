@@ -10,7 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " CoC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'ervandew/supertab'
 " emmet
 Plug 'mattn/emmet-vim', { 'for': ['html'] }
@@ -21,7 +21,7 @@ Plug 'vim-syntastic/syntastic'
 " Small language server
 Plug 'sheerun/vim-polyglot'
 " Better looking syntax
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 " Other stuff
 Plug 'tpope/vim-surround'
 " Matcher stuff
@@ -55,7 +55,8 @@ Plug 'kdheepak/lazygit.nvim'
 " Smooth scrolling
 Plug 'psliwka/vim-smoothie'
 " Live website stuff
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " Ctrl P (fuzzy finder)
 Plug 'ctrlpvim/ctrlp.vim'
 " Context during loops and stuff
@@ -152,6 +153,8 @@ set shell=bash
 " Bracey stuff
 let g:bracey_refresh_on_save = 1
 nnoremap m :Bracey<CR>
+" Markdown preview
+map <leader>c :MarkdownPreview<cr>
 " Leader key
 let mapleader = " "
 map <leader>q :q<cr>
