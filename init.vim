@@ -61,6 +61,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'ctrlpvim/ctrlp.vim'
 " Context during loops and stuff
 Plug 'wellle/context.vim'
+" Snip Running
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 call plug#end()
 
 " Install vim-plug if not found
