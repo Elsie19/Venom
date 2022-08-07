@@ -45,13 +45,7 @@ use 'itchyny/vim-cursorword'
 use 'andweeb/presence.nvim'
 -- lsp
 use 'neovim/nvim-lspconfig'
-use 'hrsh7th/cmp-nvim-lsp'
-use 'hrsh7th/cmp-buffer'
-use 'hrsh7th/cmp-path'
-use 'hrsh7th/cmp-cmdline'
-use 'hrsh7th/nvim-cmp'
-use 'hrsh7th/cmp-vsnip'
-use 'hrsh7th/vim-vsnip'
+use { 'ms-jpq/coq_nvim', branch = 'coq' }
 use 'lewis6991/impatient.nvim'
 use 'jayli/vim-easycomplete'
 use 'kyazdani42/nvim-tree.lua'
@@ -63,5 +57,4 @@ use {
   'kdheepak/tabline.nvim',
   config = function() require'tabline'.setup() end,
 }
-use 'rafamadriz/friendly-snippets'
 end)
