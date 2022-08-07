@@ -4,7 +4,7 @@
 
 -- Set easy to get to variable for setting keybindings
 --[[
-	Heres how `map` works: The first arg is what mode this keybinding should run in. The second arg is the actual keybinding, The third is what should happen when you run the keybinding, and the fourth is for extra arguments.
+Heres how `map` works: The first arg is what mode this keybinding should run in. The second arg is the actual keybinding, The third is what should happen when you run the keybinding, and the fourth is for extra arguments.
 --]]
 local map = vim.api.nvim_set_keymap
 

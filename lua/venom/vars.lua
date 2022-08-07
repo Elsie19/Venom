@@ -2,7 +2,7 @@ o.completeopt = "menuone,noselect"
 
 
 -- =============================================
--- 										Visuals
+-- 					Visuals
 -- =============================================
 
 -- turn line numbers on the side of the window on
@@ -25,7 +25,7 @@ g.indentLine_char = '│'
 
 
 -- =============================================
--- 								Functionality
+-- 				Functionality
 -- =============================================
 
 -- turn on mouse support
