@@ -20,7 +20,7 @@ require 'venom.plugins'
 -- Load autocompletions
 require 'venom.lsp'
 -- Load theming support
-local ok, _ = pcall(require, 'venom.theme')
+require 'venom.theme'
 -- Load user set variables
 require 'venom.vars'
 -- Load user set keybindings
