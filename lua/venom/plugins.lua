@@ -46,6 +46,7 @@ use 'andweeb/presence.nvim'
 -- lsp
 use 'neovim/nvim-lspconfig'
 use { 'ms-jpq/coq_nvim', branch = 'coq' }
+use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
 use 'lewis6991/impatient.nvim'
 use 'jayli/vim-easycomplete'
 use 'kyazdani42/nvim-tree.lua'
