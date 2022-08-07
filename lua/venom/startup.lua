@@ -28,4 +28,3 @@ require'nvim-tree'.toggle(false,true)
 end
 vim.fn.timer_start(0, tree_toggle_on_setup)
 -- HACK WARNING FINISHED
-

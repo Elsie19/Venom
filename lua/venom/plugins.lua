@@ -56,13 +56,13 @@ use 'hrsh7th/cmp-vsnip'
 use 'hrsh7th/vim-vsnip'
 use 'lewis6991/impatient.nvim'
 use 'jayli/vim-easycomplete'
-use {
-     "nanozuki/tabby.nvim",
-     config = function() require("tabby").setup() end,
-}
 use 'kyazdani42/nvim-tree.lua'
 use {
      'nvim-treesitter/nvim-treesitter',
      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+}
+use {
+  'kdheepak/tabline.nvim',
+  config = function() require'tabline'.setup() end,
 }
 end)
