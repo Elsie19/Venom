@@ -37,7 +37,10 @@ use 'samoshkin/vim-mergetool'
 use 'kdheepak/lazygit.nvim'
 use 'psliwka/vim-smoothie'
 use { 'turbio/bracey.vim', run = 'npm install --prefix server' }
-use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
+use {
+	'iamcco/markdown-preview.nvim',
+	run = function() vim.fn["mkdp#util#install"]() end,
+}
 use 'ctrlpvim/ctrlp.vim'
 use { 'michaelb/sniprun', run = 'bash install.sh' }
 use 'itchyny/vim-cursorword'
