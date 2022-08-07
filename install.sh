@@ -54,4 +54,6 @@ cd ..
 rm -rf Venom
 
 nvim -c 'PackerSync' \
-	-c 'COQdeps|COQnow|COQsnips'
+	-c 'COQdeps' \
+	-c 'COQnow' \
+	-c 'COQsnips'
