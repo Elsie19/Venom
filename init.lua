@@ -14,7 +14,7 @@ o = vim.o
 g = vim.g
 wo = vim.wo
 
-require 'impatient'
+local ok, _ = pcall(require, 'impatient')
 -- Load plugins
 require 'venom.plugins'
 -- Load autocompletions
