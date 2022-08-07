@@ -53,7 +53,7 @@ cp -ff ascii.txt ~/.local/share/venom/
 cd ..
 rm -rf Venom
 
-nvim -c 'PackerSync' \
-	-c 'COQdeps' \
+nvim -c 'PackerSync'
+nvim -c 'COQdeps' \
 	-c 'COQnow' \
 	-c 'COQsnips'
