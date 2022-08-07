@@ -4,6 +4,8 @@ use {
      'nvim-lualine/lualine.nvim',
      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
+use 'preservim/nerdtree'
+use 'Xuyuanp/nerdtree-git-plugin'
 use 'mattn/emmet-vim'
 use 'rust-lang/rust.vim'
 use 'tjvr/vim-nearley'
@@ -44,11 +46,16 @@ use { 'michaelb/sniprun', run = 'bash install.sh' }
 use 'itchyny/vim-cursorword'
 use 'andweeb/presence.nvim'
 -- lsp
-use 'neovim/nvim-lspconfig'
-use { 'ms-jpq/coq_nvim', branch = 'coq' }
-use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+use 'hrsh7th/cmp-nvim-lsp'
+use 'hrsh7th/cmp-buffer'
+use 'hrsh7th/cmp-path'
+use 'hrsh7th/cmp-cmdline'
+use 'hrsh7th/nvim-cmp'
+use "rafamadriz/friendly-snippets"
+use 'hrsh7th/cmp-vsnip'
+use 'hrsh7th/vim-vsnip'
+use 'onsails/lspkind.nvim'
 use 'lewis6991/impatient.nvim'
-use 'jayli/vim-easycomplete'
 use 'kyazdani42/nvim-tree.lua'
 use {
      'nvim-treesitter/nvim-treesitter',
@@ -58,4 +65,11 @@ use {
   'kdheepak/tabline.nvim',
   config = function() require'tabline'.setup() end,
 }
+
+use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+}
+
 end)
