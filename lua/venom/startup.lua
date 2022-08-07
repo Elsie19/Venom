@@ -13,7 +13,7 @@ require'nvim-treesitter.configs'.setup {
 vim.cmd(
 [[
 let g:startify_custom_header =
-\ startify#pad(split(system('cat /home/henry/.local/share/venom/ascii.txt'), '\n'))
+\ startify#pad(split(system('cat ~/.local/share/venom/ascii.txt'), '\n'))
 let g:startify_custom_footer = startify#center(split(system('echo Venom 2.0 Man o War'), '\n'))
 ]]
 )
