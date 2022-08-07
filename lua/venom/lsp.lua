@@ -51,6 +51,7 @@ cmp.setup({
     -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = 'buffer' },
+    { name = 'path' },
   })
 })
 
