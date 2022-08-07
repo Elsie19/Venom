@@ -63,4 +63,5 @@ use {
   'kdheepak/tabline.nvim',
   config = function() require'tabline'.setup() end,
 }
+use 'rafamadriz/friendly-snippets'
 end)
