@@ -45,7 +45,6 @@ use 'ctrlpvim/ctrlp.vim'
 use { 'michaelb/sniprun', run = 'bash install.sh' }
 use 'itchyny/vim-cursorword'
 use 'andweeb/presence.nvim'
-use '/home/henry/.local/share/nvim/site/pack/themes/start/dracula_pro'
 -- lsp
 use 'neovim/nvim-lspconfig'
 use 'hrsh7th/cmp-nvim-lsp'

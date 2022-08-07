@@ -26,9 +26,11 @@ program() {
 }
 if ! program git; then
     fancy_message error "git not installed"
+	exit 1
 fi
 if ! program sudo; then
     fancy_message error "sudo not installed"
+	exit 1
 fi
 if program pacman; then
     sudo pacman -Syu --noconfirm neovim python-pyflakes figlet nodejs npm shellcheck eslint lazygit cargo rust # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
@@ -39,11 +41,15 @@ fi
 mkdir -pv $HOME/.config/nvim
 mkdir -pv $HOME/.local/share/venom
 
+# Install packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 cd /tmp
 git clone https://github.com/Henryws/Venom
 cd Venom
-cp -r lua ~/.config/nvim
+cp -rf lua ~/.config/nvim
 cp init.lua ~/.config/nvim
-cp -f ascii.txt ~/.local/share/venom/
+cp -ff ascii.txt ~/.local/share/venom/
 cd ..
-rm -r Venom
+rm -rf Venom

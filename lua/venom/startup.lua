@@ -19,6 +19,7 @@ end
 
 -- I have no idea why packer doesn't run this during start but whatever
 require("nvim-tree").setup()
+require("lualine").setup()
 
 -- HACK WARNING AHEAD
 -- Ok basically nvim-tree won't allow a simple command such as `silent! autocmd vimenter * NvimTreeToggle | wincmd p`, I have no idea why, so basically I have to get the timer to trigger it right after.
