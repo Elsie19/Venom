@@ -1,6 +1,7 @@
 # Venom
 
-![screenshot of venom](https://user-images.githubusercontent.com/58742515/155021365-64b677cd-4841-4126-8b98-74377be1cbe3.png)
+![Screenshot of venom](https://user-images.githubusercontent.com/58742515/183278775-5de3bd17-26f1-4e7d-b5be-abea3c887afa.png)
+
 
 ## Install
 ```bash
