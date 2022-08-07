@@ -4,8 +4,6 @@ use {
      'nvim-lualine/lualine.nvim',
      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
-use 'preservim/nerdtree'
-use 'Xuyuanp/nerdtree-git-plugin'
 use 'mattn/emmet-vim'
 use 'rust-lang/rust.vim'
 use 'tjvr/vim-nearley'
