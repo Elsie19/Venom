@@ -84,9 +84,13 @@ cmp.setup.cmdline(':', {
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-require('lspconfig')['sumneko_lua'].setup {
-  capabilities = capabilities,
-}
+
+local servers = { 'sumneko_lua', 'rust-analyzer', 'bash-language-server' }
+for i = 1, #servers do
+	require('lspconfig')[i].setup {
+		capabilities = capabilities,
+	}
+end
 
 require("mason").setup()
 require("mason-lspconfig").setup({
