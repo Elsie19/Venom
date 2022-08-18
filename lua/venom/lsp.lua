@@ -94,5 +94,5 @@ end
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = {"sumneko_lua", "rust-analyzer", "bash-language-server"}
+    ensure_installed = servers
 })
