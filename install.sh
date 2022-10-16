@@ -49,7 +49,7 @@ git clone https://github.com/Henryws/Venom
 cd Venom
 cp -rf lua ~/.config/nvim
 cp init.lua ~/.config/nvim
-cp -ff ascii.txt ~/.local/share/venom/
+cp -f ascii.txt ~/.local/share/venom/
 cd ..
 rm -rf Venom
 
