@@ -33,7 +33,7 @@ if ! program sudo; then
   exit 1
 fi
 if program pacman; then
-    sudo pacman -Syu --noconfirm neovim python-pyflakes figlet nodejs npm shellcheck eslint lazygit cargo rust # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
+    sudo pacman -Syu --noconfirm neovim pyflakes3 figlet nodejs npm shellcheck eslint lazygit cargo rust # figlet for startity, nodejs for CoC, npm for ALE, shellcheck eslint for ALE
 elif program apt-get; then
     sudo apt-get install pyflakes figlet nodejs npm shellcheck eslint rustc
 fi
