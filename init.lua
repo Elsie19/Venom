@@ -14,16 +14,17 @@ o = vim.o
 g = vim.g
 wo = vim.wo
 
-local ok, _ = pcall(require, 'impatient')
+pcall(require, "impatient")
+
 -- Load plugins
-require 'venom.plugins'
+require("venom.plugins")
 -- Load autocompletions
-require 'venom.lsp'
+require("venom.lsp")
 -- Load theming support
-require 'venom.theme'
+require("venom.theme")
 -- Load user set variables
-require 'venom.vars'
+require("venom.vars")
 -- Load user set keybindings
-require 'venom.keybinds'
+require("venom.keybinds")
 -- Load startup configurations
-require 'venom.startup'
+require("venom.startup")
