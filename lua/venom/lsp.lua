@@ -85,7 +85,7 @@ cmp.setup.cmdline(":", {
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local servers = { "sumneko_lua", "rust_analyzer", "bashls" }
-for i, _ in ipairs(servers) do
+for _, i in ipairs(servers) do
   require("lspconfig")[i].setup({
     capabilities = capabilities,
   })

@@ -37,4 +37,4 @@ g.indentLine_fileTypeExclude = { "startify" }
 
 -- Set lazy redraw, which will mean the screen won't be redrawn when executing macros, registers
 -- and other commands that haven't been typed
-vim.cmd([[ set lazyredraw ]])
+o.lazyredraw = true
