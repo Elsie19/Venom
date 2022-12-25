@@ -1,6 +1,5 @@
 o.completeopt = "menuone,noselect"
 
-
 -- =============================================
 -- 					Visuals
 -- =============================================
@@ -21,21 +20,20 @@ g.t_co = 256
 vim.opt.cursorline = true
 
 -- set indent line
-g.indentLine_char = '│'
-
+g.indentLine_char = "│"
 
 -- =============================================
 -- 				Functionality
 -- =============================================
 
 -- turn on mouse support
-o.mouse = 'a'
+o.mouse = "a"
 
 -- Copy paste between neovim and other programs
-vim.cmd([[ set clipboard=unnamedplus ]])
+o.clipboard = "unnamedplus"
 
 -- disable indent lines on startify
-g.indentLine_fileTypeExclude = {'startify'}
+g.indentLine_fileTypeExclude = { "startify" }
 
 -- Set lazy redraw, which will mean the screen won't be redrawn when executing macros, registers
 -- and other commands that haven't been typed
