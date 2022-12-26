@@ -1,6 +1,6 @@
 # Venom
 
-![Screenshot of venom](https://user-images.githubusercontent.com/58742515/183278775-5de3bd17-26f1-4e7d-b5be-abea3c887afa.png)
+![Screenshot of venom](https://user-images.githubusercontent.com/58742515/209584680-063f7b56-fc22-4075-bc3e-95c8e839af8b.png)
 
 
 ## Install
