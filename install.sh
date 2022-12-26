@@ -52,5 +52,3 @@ cp init.lua ~/.config/nvim
 cp -f ascii.txt ~/.local/share/venom/
 cd ..
 rm -rf Venom
-
-nvim -c 'PackerSync'

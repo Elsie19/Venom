@@ -16,8 +16,9 @@ wo = vim.wo
 
 pcall(require, "impatient")
 
--- Load plugins
-require("venom.plugins")
+-- Bootstrap Lazy
+require("venom.lazy")
+
 -- Load autocompletions
 require("venom.lsp")
 -- Load theming support
