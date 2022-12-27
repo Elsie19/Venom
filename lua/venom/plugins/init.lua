@@ -58,7 +58,6 @@ return {
 	"hrsh7th/cmp-vsnip",
 	"hrsh7th/vim-vsnip",
 	"onsails/lspkind.nvim",
-	"lewis6991/impatient.nvim",
 	{
 		"kyazdani42/nvim-tree.lua",
 		config = true,

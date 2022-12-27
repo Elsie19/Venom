@@ -14,8 +14,6 @@ o = vim.o
 g = vim.g
 wo = vim.wo
 
-pcall(require, "impatient")
-
 -- Bootstrap Lazy
 require("venom.lazy")
 
