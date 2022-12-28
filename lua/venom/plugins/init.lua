@@ -8,8 +8,6 @@ return {
 		"habamax/vim-godot",
 		ft = { "gd" },
 	},
-	"preservim/nerdtree",
-	"Xuyuanp/nerdtree-git-plugin",
 	"mattn/emmet-vim",
 	"rust-lang/rust.vim",
 	"tjvr/vim-nearley",
@@ -60,7 +58,11 @@ return {
 	"onsails/lspkind.nvim",
 	{
 		"kyazdani42/nvim-tree.lua",
-		config = true,
+		config = function()
+			require("nvim-tree").setup({
+				filters = { custom = { "^.git$" } }
+			})
+		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
