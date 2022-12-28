@@ -16,8 +16,8 @@ require("venom.lazy")
 require("venom.lsp")
 -- Load theming support
 require("venom.theme")
--- Load user set variables
-require("venom.vars")
+-- Load nvim options
+require("venom.options")
 -- Load user set keybindings
 require("venom.keybinds")
 -- Load startup configurations
