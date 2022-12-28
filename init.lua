@@ -9,11 +9,6 @@ __      ________ _   _  ____  __  __
 		~ A venomous neovim config
 --]]
 
--- Set required variables
-o = vim.o
-g = vim.g
-wo = vim.wo
-
 -- Bootstrap Lazy
 require("venom.lazy")
 

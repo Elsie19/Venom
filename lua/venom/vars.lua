@@ -1,40 +1,40 @@
-o.completeopt = "menuone,noselect"
+vim.opt.completeopt = "menuone,noselect"
 
 -- =============================================
 -- 					Visuals
 -- =============================================
 
 -- turn line numbers on the side of the window on
-wo.number = true
+vim.opt.number = true
 
 -- set relative line numbers
-wo.relativenumber = true
+vim.opt.relativenumber = true
 
 -- set background based off of colorscheme I think
-o.termguicolors = true
+vim.opt.termguicolors = true
 
 -- set color capabilities to 256
-g.t_co = 256
+vim.g.t_co = 256
 
 -- set cursorline
 vim.opt.cursorline = true
 
 -- set indent line
-g.indentLine_char = "│"
+vim.g.indentLine_char = "│"
 
 -- =============================================
 -- 				Functionality
 -- =============================================
 
 -- turn on mouse support
-o.mouse = "a"
+vim.opt.mouse = "a"
 
 -- Copy paste between neovim and other programs
-o.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- disable indent lines on startify
-g.indentLine_fileTypeExclude = { "startify" }
+vim.g.indentLine_fileTypeExclude = { "startify" }
 
 -- Set lazy redraw, which will mean the screen won't be redrawn when executing macros, registers
 -- and other commands that haven't been typed
-o.lazyredraw = true
+vim.opt.lazyredraw = true
