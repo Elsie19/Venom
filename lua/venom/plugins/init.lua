@@ -9,7 +9,6 @@ return {
 		ft = { "gd" },
 		config = true,
 	},
-	"mattn/emmet-vim",
 	"rust-lang/rust.vim",
 	"tjvr/vim-nearley",
 	"sheerun/vim-polyglot",
