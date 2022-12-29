@@ -10,7 +10,6 @@ return {
 		config = true,
 	},
 	"tjvr/vim-nearley",
-	"sheerun/vim-polyglot",
 	"tpope/vim-surround",
 	"tmsvg/pear-tree",
 	"ryanoasis/vim-devicons",
