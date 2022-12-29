@@ -19,7 +19,6 @@ return {
 		config = true,
 	},
 	"andymass/vim-matchup",
-	"dense-analysis/ale",
 	"editorconfig/editorconfig-vim",
 	"preservim/nerdcommenter",
 	"joshdick/onedark.vim",
