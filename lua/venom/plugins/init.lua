@@ -20,7 +20,7 @@ return {
 	},
 	"andymass/vim-matchup",
 	"gpanders/editorconfig.nvim",
-	"preservim/nerdcommenter",
+	"JoosepAlviste/nvim-ts-context-commentstring",
 	"joshdick/onedark.vim",
 	"drewtempelmeyer/palenight.vim",
 	"sickill/vim-monokai",
