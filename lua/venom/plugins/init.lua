@@ -19,7 +19,7 @@ return {
 		config = true,
 	},
 	"andymass/vim-matchup",
-	"editorconfig/editorconfig-vim",
+	"gpanders/editorconfig.nvim",
 	"preservim/nerdcommenter",
 	"joshdick/onedark.vim",
 	"drewtempelmeyer/palenight.vim",

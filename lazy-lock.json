@@ -1,5 +1,4 @@
 {
-  "ale": { "branch": "master", "commit": "ef6715ee41f7de570e270456a261fd005c67884e" },
   "bats.vim": { "branch": "master", "commit": "6a5d2ef22b0ede503d867770afd02ebb1f97b709" },
   "bracey.vim": { "branch": "master", "commit": "4e1a22acc01787814819df1057d039d4ecf357eb" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
@@ -9,11 +8,10 @@
   "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
   "colorizer": { "branch": "master", "commit": "72790a003d5a706c287486a1a81e3a6b32158b54" },
   "ctrlp.vim": { "branch": "master", "commit": "8b4a9523632049b3b373de1233bef346073b8982" },
-  "editorconfig-vim": { "branch": "master", "commit": "30ddc057f71287c3ac2beca876e7ae6d5abe26a0" },
+  "editorconfig.nvim": { "branch": "master", "commit": "2af880947129f1ab776b732a4eecb92528472ef5" },
   "friendly-snippets": { "branch": "main", "commit": "1a6a02350568d6830bcfa167c72f9b6e75e454ae" },
   "godot.nvim": { "branch": "main", "commit": "9a2d631c6a6313553dbd66f749ed3bc99bd4b4a9" },
   "indent-blankline.nvim": { "branch": "master", "commit": "c4c203c3e8a595bc333abaf168fcb10c13ed5fb7" },
-  "indentLine": { "branch": "master", "commit": "d15d63bf9c4a74a02470d4bc8ecce53df13e3a75" },
   "lazy.nvim": { "branch": "main", "commit": "717cd2f3d683e186888f1e238a19af9c7646a539" },
   "lazygit.nvim": { "branch": "main", "commit": "32bffdebe273e571588f25c8a708ca7297928617" },
   "lspkind.nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
