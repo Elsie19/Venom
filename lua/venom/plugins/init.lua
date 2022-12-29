@@ -14,7 +14,10 @@ return {
 		"kylechui/nvim-surround",
 		config = true,
 	},
-	"tmsvg/pear-tree",
+	{
+		"windwp/nvim-autopairs",
+		config = true,
+	},
 	"ryanoasis/vim-devicons",
 	"Yggdroot/indentLine",
 	"andymass/vim-matchup",
