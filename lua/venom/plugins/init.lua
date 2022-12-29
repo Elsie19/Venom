@@ -10,7 +10,10 @@ return {
 		config = true,
 	},
 	"tjvr/vim-nearley",
-	"tpope/vim-surround",
+	{
+		"kylechui/nvim-surround",
+		config = true,
+	},
 	"tmsvg/pear-tree",
 	"ryanoasis/vim-devicons",
 	"Yggdroot/indentLine",
