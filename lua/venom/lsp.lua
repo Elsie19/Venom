@@ -86,9 +86,12 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protoc
 
 local servers = { "sumneko_lua", "rust_analyzer", "bashls", "emmet_ls" }
 for _, i in ipairs(servers) do
-	require("lspconfig")[i].setup({
-		capabilities = capabilities,
-	})
+	-- Skip rust_analyzer setup as rust-tools already does it
+	if i ~= "rust_analyzer" then
+		require("lspconfig")[i].setup({
+			capabilities = capabilities,
+		})
+	end
 end
 
 require("mason").setup()
