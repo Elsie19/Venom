@@ -5,8 +5,9 @@ return {
 		dependencies = "kyazdani42/nvim-web-devicons",
 	},
 	{
-		"habamax/vim-godot",
+		"Lommix/godot.nvim",
 		ft = { "gd" },
+		config = true,
 	},
 	"mattn/emmet-vim",
 	"rust-lang/rust.vim",
@@ -60,7 +61,7 @@ return {
 		"kyazdani42/nvim-tree.lua",
 		config = function()
 			require("nvim-tree").setup({
-				filters = { custom = { "^.git$" } }
+				filters = { custom = { "^.git$" } },
 			})
 		end,
 	},
