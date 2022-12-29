@@ -22,9 +22,6 @@ vim.opt.cursorline = true
 -- set indent line
 vim.g.indentLine_char = "│"
 
--- hide command line unless needed
-vim.opt.cmdheight = 0
-
 -- disable `~` on nonexistent lines
 vim.opt.fillchars = { eob = " " }
 
