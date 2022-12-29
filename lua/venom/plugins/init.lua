@@ -18,7 +18,6 @@ return {
 		"windwp/nvim-autopairs",
 		config = true,
 	},
-	"ryanoasis/vim-devicons",
 	"Yggdroot/indentLine",
 	"andymass/vim-matchup",
 	"dense-analysis/ale",
