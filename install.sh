@@ -38,6 +38,8 @@ elif program apt-get; then
     sudo apt-get install pyflakes figlet nodejs npm shellcheck eslint rustc
 fi
 
+curl -fsSL https://deno.land/x/install/install.sh | sh
+
 mkdir -pv $HOME/.config/nvim
 mkdir -pv $HOME/.local/share/venom
 

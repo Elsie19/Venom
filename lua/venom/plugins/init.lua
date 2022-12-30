@@ -48,12 +48,7 @@ return {
 	{ "michaelb/sniprun", build = "bash install.sh" },
 	{ "turbio/bracey.vim", build = "npm install --prefix server" },
 
-	{
-		"iamcco/markdown-preview.nvim",
-		build = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	},
+	{ "toppair/peek.nvim", build = "deno task --quiet build:fast" },
 	"ctrlpvim/ctrlp.vim",
 	"itchyny/vim-cursorword",
 	"andweeb/presence.nvim",
