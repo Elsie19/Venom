@@ -53,7 +53,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
 	},
-	"itchyny/vim-cursorword",
+	"xiyaowong/nvim-cursorword",
 	"andweeb/presence.nvim",
 	-- lsp,
 	"hrsh7th/cmp-nvim-lsp",
