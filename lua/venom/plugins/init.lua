@@ -31,7 +31,10 @@ return {
 	"EdenEast/nightfox.nvim",
 	"aliou/bats.vim",
 	"jghauser/mkdir.nvim",
-	"lilydjwg/colorizer",
+	{
+		"NvChad/nvim-colorizer.lua",
+		config = true,
+	},
 	"airblade/vim-gitgutter",
 	"tpope/vim-fugitive",
 	"samoshkin/vim-mergetool",
