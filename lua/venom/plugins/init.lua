@@ -30,7 +30,7 @@ return {
 	},
 	"EdenEast/nightfox.nvim",
 	"aliou/bats.vim",
-	"pbrisbin/vim-mkdir",
+	"jghauser/mkdir.nvim",
 	"lilydjwg/colorizer",
 	"airblade/vim-gitgutter",
 	"tpope/vim-fugitive",
