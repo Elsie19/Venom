@@ -39,7 +39,6 @@ return {
 		"lewis6991/gitsigns.nvim",
 		config = true,
 	},
-	"tpope/vim-fugitive",
 	"samoshkin/vim-mergetool",
 	"kdheepak/lazygit.nvim",
 	"psliwka/vim-smoothie",

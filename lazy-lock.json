@@ -42,7 +42,6 @@
   "sniprun": { "branch": "master", "commit": "79806dad094770a1563ac0227c9692f7592df744" },
   "tabline.nvim": { "branch": "main", "commit": "5d76dc8616b4b7b892229cc05cd0f4cd0200077a" },
   "vim-cursorword": { "branch": "master", "commit": "371fdd7fa8817c28aa09d181cfcfa3c7ca29bf56" },
-  "vim-fugitive": { "branch": "master", "commit": "99cdb88bc64063dc4656ae53496f06fb2a394cd4" },
   "vim-matchup": { "branch": "master", "commit": "db5120dd9887c988de7cd973ddb951e465d413e5" },
   "vim-mergetool": { "branch": "master", "commit": "0275a85256ad173e3cde586d54f66566c01b607f" },
   "vim-nearley": { "branch": "master", "commit": "13ccbe017f6b41551269f19ad6fa6036a0b7eb6c" },
