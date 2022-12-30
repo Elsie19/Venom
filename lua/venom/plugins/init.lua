@@ -41,7 +41,10 @@ return {
 	},
 	"sindrets/diffview.nvim",
 	"kdheepak/lazygit.nvim",
-	"psliwka/vim-smoothie",
+	{
+		"karb94/neoscroll.nvim",
+		config = true,
+	},
 	{ "michaelb/sniprun", build = "bash install.sh" },
 	{ "turbio/bracey.vim", build = "npm install --prefix server" },
 
