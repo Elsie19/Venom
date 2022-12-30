@@ -103,5 +103,10 @@ return {
 		config = function()
 			require("leap").add_default_mappings()
 		end,
-	}
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = "nvim-lua/plenary.nvim",
+		config = true,
+	},
 }
