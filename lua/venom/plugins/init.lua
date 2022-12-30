@@ -49,7 +49,10 @@ return {
 	{ "turbio/bracey.vim", build = "npm install --prefix server" },
 
 	{ "toppair/peek.nvim", build = "deno task --quiet build:fast" },
-	"ctrlpvim/ctrlp.vim",
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = "nvim-lua/plenary.nvim",
+	},
 	"itchyny/vim-cursorword",
 	"andweeb/presence.nvim",
 	-- lsp,

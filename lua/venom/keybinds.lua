@@ -20,6 +20,18 @@ map("n", "m", [[:Bracey<CR>]], { desc = "Run Bracey" })
 -- Set keybinding to toggle tree
 map("n", "<C-b>", [[:NvimTreeToggle<CR>]], { desc = "Toggle NvimTree" })
 
+local builtin = require("telescope.builtin")
+local wk = require("which-key")
+wk.register({
+	f = {
+		name = "Telescope",
+		f = { builtin.find_files, "Find Files" },
+		g = { builtin.live_grep, "Find Words" },
+		b = { builtin.buffers, "Find Buffers" },
+		h = { builtin.help_tags, "Find Help Tags" },
+	},
+}, { prefix = "<leader>" })
+
 -- ====================
 --     Your Stuff
 -- ====================
