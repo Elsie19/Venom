@@ -18,7 +18,7 @@ map("n", "<leader>g", [[:LazyGit<CR>]], { desc = "Open LazyGit" })
 -- Set keybinding to run Bracey
 map("n", "m", [[:Bracey<CR>]], { desc = "Run Bracey" })
 -- Set keybinding to toggle tree
-map("n", "<C-b>", [[:NvimTreeToggle<CR>]], { desc = "Toggle NvimTree" })
+map("n", "<leader>b", [[:NvimTreeToggle<CR>]], { desc = "Toggle NvimTree" })
 -- Set keybinding to trigger code action menu
 map("n", "ca", [[:CodeActionMenu<CR>]], { desc = "Trigger CodeActionMenu" })
 
