@@ -19,6 +19,8 @@ map("n", "<leader>g", [[:LazyGit<CR>]], { desc = "Open LazyGit" })
 map("n", "m", [[:Bracey<CR>]], { desc = "Run Bracey" })
 -- Set keybinding to toggle tree
 map("n", "<C-b>", [[:NvimTreeToggle<CR>]], { desc = "Toggle NvimTree" })
+-- Set keybinding to trigger code action menu
+map("n", "<leader>ca", [[:CodeActionMenu<CR>]], { desc = "Trigger CodeActionMenu" })
 
 local builtin = require("telescope.builtin")
 local wk = require("which-key")
