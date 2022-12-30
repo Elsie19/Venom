@@ -39,7 +39,7 @@ return {
 		"lewis6991/gitsigns.nvim",
 		config = true,
 	},
-	"samoshkin/vim-mergetool",
+	"sindrets/diffview.nvim",
 	"kdheepak/lazygit.nvim",
 	"psliwka/vim-smoothie",
 	{ "michaelb/sniprun", build = "bash install.sh" },
