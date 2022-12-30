@@ -98,4 +98,10 @@ return {
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	{ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
+	{
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+	}
 }
