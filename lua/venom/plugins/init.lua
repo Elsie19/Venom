@@ -30,7 +30,6 @@ return {
 	},
 	"EdenEast/nightfox.nvim",
 	"aliou/bats.vim",
-	"mhinz/vim-startify",
 	"pbrisbin/vim-mkdir",
 	"lilydjwg/colorizer",
 	"airblade/vim-gitgutter",

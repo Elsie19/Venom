@@ -1,10 +1,3 @@
--- Set custom logo and footer
-vim.cmd([[
-let g:startify_custom_header =
-\ startify#pad(split(system('cat ~/.local/share/venom/ascii.txt'), '\n'))
-let g:startify_custom_footer = startify#pad(split(system('echo Venom 2.0 Man o War'), '\n'))
-]])
-
 -- Close last window if it is NvimTree
 vim.api.nvim_create_autocmd("BufEnter", {
 	nested = true,
