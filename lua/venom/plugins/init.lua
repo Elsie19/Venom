@@ -35,7 +35,10 @@ return {
 		"NvChad/nvim-colorizer.lua",
 		config = true,
 	},
-	"airblade/vim-gitgutter",
+	{
+		"lewis6991/gitsigns.nvim",
+		config = true,
+	},
 	"tpope/vim-fugitive",
 	"samoshkin/vim-mergetool",
 	"kdheepak/lazygit.nvim",
