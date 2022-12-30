@@ -21,6 +21,8 @@ map("n", "m", [[:Bracey<CR>]], { desc = "Run Bracey" })
 map("n", "<leader>b", [[:NvimTreeToggle<CR>]], { desc = "Toggle NvimTree" })
 -- Set keybinding to trigger code action menu
 map("n", "ca", [[:CodeActionMenu<CR>]], { desc = "Trigger CodeActionMenu" })
+-- Set keybinding to leap backwards
+map("n", "_", "<Plug>(leap-backward)", { desc = "Leap backwards" })
 
 local builtin = require("telescope.builtin")
 local wk = require("which-key")
