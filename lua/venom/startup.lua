@@ -8,6 +8,9 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 
+vim.cmd([[ au BufRead,BufNewFile *.pacscript set filetype=bash ]])
+vim.cmd([[ au BufRead,BufNewFile PACBUILD set filetype=bash ]])
+
 -- HACK WARNING AHEAD
 -- Ok basically nvim-tree won't allow a simple command such as `silent! autocmd vimenter * NvimTreeToggle | wincmd p`, I have no idea why, so basically I have to get the timer to trigger it right after.
 local function tree_toggle_on_setup()
