@@ -16,7 +16,7 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup("venom.plugins", {
-	install = { colorscheme = { "duskfox", "habamax" } },
+	install = { colorscheme = { "dracula", "duskfox", "habamax" } },
 	checker = { enabled = true },
 	diff = {
 		cmd = "terminal_git",

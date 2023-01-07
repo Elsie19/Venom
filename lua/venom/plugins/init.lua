@@ -1,13 +1,18 @@
 return {
 	{
 		"nvim-lualine/lualine.nvim",
-		config = true,
+		config = function()
+			require("lualine").setup {
+				options = { theme = "dracula-nvim" },
+			}
+		end,
 		dependencies = "kyazdani42/nvim-web-devicons",
 	},
 	{
 		"Lommix/godot.nvim",
 		ft = { "gd" },
 		config = true,
+		event = "VeryLazy",
 	},
 	"tjvr/vim-nearley",
 	{
@@ -66,6 +71,7 @@ return {
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
+		event = "VeryLazy",
 	},
 	"saadparwaiz1/cmp_luasnip",
 	"L3MON4D3/LuaSnip",
@@ -109,4 +115,5 @@ return {
 		dependencies = "nvim-lua/plenary.nvim",
 		config = true,
 	},
+	"Mofiqul/dracula.nvim",
 }
