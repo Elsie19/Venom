@@ -4,9 +4,11 @@ return {
 		config = function()
 			require("lualine").setup {
 				options = { theme = "dracula-nvim" },
+				extensions = { 'nvim-dap-ui', 'nvim-tree' },
 			}
 		end,
-		dependencies = "kyazdani42/nvim-web-devicons",
+		event = "VeryLazy",
+		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 	{
 		"Lommix/godot.nvim",
@@ -21,11 +23,20 @@ return {
 	},
 	{
 		"windwp/nvim-autopairs",
-		config = true,
+		config = function()
+			require("nvim-autopairs").setup({
+				enable_check_bracket_line = false,
+			})
+		end,
 	},
-	"andymass/vim-matchup",
-	"gpanders/editorconfig.nvim",
-	"JoosepAlviste/nvim-ts-context-commentstring",
+	{
+		"andymass/vim-matchup",
+		event = "VeryLazy",
+	},
+	{
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		event = "VeryLazy",
+	},
 	"navarasu/onedark.nvim",
 	"marko-cerovac/material.nvim",
 	"tanvirtin/monokai.nvim",
@@ -38,27 +49,36 @@ return {
 	"jghauser/mkdir.nvim",
 	{
 		"NvChad/nvim-colorizer.lua",
-		config = true,
+		config = function()
+			require 'colorizer'.setup()
+			require("colorizer").attach_to_buffer(0, { mode = "background", css = true })
+		end,
 	},
 	{
 		"lewis6991/gitsigns.nvim",
 		config = true,
+		event = "VeryLazy",
 	},
-	"sindrets/diffview.nvim",
+	{
+		"sindrets/diffview.nvim",
+		event = "VeryLazy",
+	},
 	"kdheepak/lazygit.nvim",
 	{
 		"karb94/neoscroll.nvim",
 		config = true,
+		event = "VeryLazy",
 	},
-	{ "michaelb/sniprun", build = "bash install.sh" },
 	{ "turbio/bracey.vim", build = "npm install --prefix server" },
-
 	{ "toppair/peek.nvim", build = "deno task --quiet build:fast" },
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
 	},
-	"xiyaowong/nvim-cursorword",
+	{
+		"xiyaowong/nvim-cursorword",
+		event = "VeryLazy",
+	},
 	"andweeb/presence.nvim",
 	-- lsp,
 	"hrsh7th/cmp-nvim-lsp",
@@ -83,6 +103,7 @@ return {
 				filters = { custom = { "^.git$" } },
 			})
 		end,
+		event = "VeryLazy",
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -92,6 +113,14 @@ return {
 		end,
 		config = function()
 			require("venom.treesitter")
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		config = function()
+			require("treesitter-context").setup({
+				enable = true,
+			})
 		end,
 	},
 	{
@@ -116,4 +145,44 @@ return {
 		config = true,
 	},
 	"Mofiqul/dracula.nvim",
+	{
+		"NoahTheDuke/vim-just",
+		event = "VeryLazy",
+	},
+	{ "rcarriga/nvim-dap-ui",           dependencies = { "mfussenegger/nvim-dap", "theHamsta/nvim-dap-virtual-text" } },
+	({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	}),
+	"mhartington/formatter.nvim",
+	{
+		"p00f/clangd_extensions.nvim",
+		config = function()
+			require("clangd_extensions").setup({
+				extensions = {
+					autoSetHints = true,
+					inlay_hints = {
+						only_current_line = false,
+						show_parameter_hints = true,
+						parameter_hints_prefix = "↞ ",
+						other_hints_prefix = "➾ ",
+						highlight = "Comment",
+					}
+				}
+			})
+		end,
+	},
+	{
+		"LhKipp/nvim-nu",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+	},
+	"wakatime/vim-wakatime",
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require('nvim-ts-autotag').setup()
+		end,
+	},
 }

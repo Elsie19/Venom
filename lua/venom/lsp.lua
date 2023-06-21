@@ -87,7 +87,8 @@ cmp.setup.cmdline(":", {
 -- Setup lspconfig.
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local servers = { "sumneko_lua", "rust_analyzer", "bashls", "emmet_ls", "clangd" }
+local servers = { "lua_ls", "rust_analyzer", "bashls", "emmet_ls", --[["clangd"--]] "jdtls", "cmake", "tsserver",
+	"gopls" }
 for _, i in ipairs(servers) do
 	-- Skip rust_analyzer setup as rust-tools already does it
 	if i ~= "rust_analyzer" then

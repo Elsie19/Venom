@@ -62,3 +62,7 @@ vim.opt.undofile = true
 
 -- Disable making a backup before overwriting a file
 vim.opt.writebackup = false
+
+vim.cmd([[ set tabstop=4 shiftwidth=4 expandtab ]])
+
+vim.g.editorconfig = true

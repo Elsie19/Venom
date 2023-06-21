@@ -1,6 +1,6 @@
 return {
 	"folke/which-key.nvim",
-	config = {
+	opts = {
 		plugins = {
 			spelling = { enabled = true },
 			presets = { operators = false },

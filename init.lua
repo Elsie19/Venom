@@ -20,5 +20,9 @@ require("venom.theme")
 require("venom.options")
 -- Load user set keybindings
 require("venom.keybinds")
+-- Load debugger
+require("venom.dap")
+-- Load formatter
+require("venom.formatter")
 -- Load startup configurations
 require("venom.startup")
