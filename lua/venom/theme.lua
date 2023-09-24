@@ -6,5 +6,6 @@ dracula.setup({
 			bg = "#303030"
 		}
 	},
+	italic_comment = true,
 })
 vim.cmd.colorscheme("dracula")

@@ -64,5 +64,8 @@ vim.opt.undofile = true
 vim.opt.writebackup = false
 
 vim.cmd([[ set tabstop=4 shiftwidth=4 expandtab ]])
+vim.cmd([[ set cinkeys-=: ]])
 
 vim.g.editorconfig = true
+
+vim.cmd([[set mousemodel=extend]])

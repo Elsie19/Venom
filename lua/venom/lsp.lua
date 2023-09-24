@@ -85,9 +85,14 @@ cmp.setup.cmdline(":", {
 })
 
 -- Setup lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+vim.tbl_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+
+capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
 
 local servers = { "lua_ls", "rust_analyzer", "bashls", "emmet_ls", --[["clangd"--]] "jdtls", "cmake", "tsserver",
+	"pyright",
 	"gopls" }
 for _, i in ipairs(servers) do
 	-- Skip rust_analyzer setup as rust-tools already does it

@@ -79,7 +79,14 @@ return {
 		"xiyaowong/nvim-cursorword",
 		event = "VeryLazy",
 	},
-	"andweeb/presence.nvim",
+	{
+		"andweeb/presence.nvim",
+		config = function()
+			require("presence").setup({
+				enable_line_number = true,
+			})
+		end,
+	},
 	-- lsp,
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-buffer",
@@ -178,7 +185,6 @@ return {
 			require("leap").add_default_mappings()
 		end,
 	},
-	"wakatime/vim-wakatime",
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()

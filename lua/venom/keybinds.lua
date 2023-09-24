@@ -28,6 +28,10 @@ map("n", "K", [[:lua vim.lsp.buf.definition()<CR>]], { desc = "Jump to definitio
 -- Set keybinding to leap backwards
 map("n", "_", "<Plug>(leap-backward)", { desc = "Leap backwards" })
 
+map("n", "vrr", [[:lua vim.lsp.buf.references()<CR>]], { desc = "Find occurences of variable" })
+map("n", "<C-j>", [[:cn<CR>]], { desc = "Go down in quickfix" })
+map("n", "<C-k>", [[:cp<CR>]], { desc = "Go up in quickfix" })
+
 local builtin = require("telescope.builtin")
 local wk = require("which-key")
 

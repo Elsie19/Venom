@@ -10,6 +10,7 @@
 --
 vim.cmd([[ au BufRead,BufNewFile *.pacscript set filetype=bash ]])
 vim.cmd([[ au BufRead,BufNewFile PACBUILD set filetype=bash ]])
+vim.cmd([[ au BufRead,BufNewFile *.nuon set filetype=json ]])
 --
 -- local function open_nvim_tree()
 --   -- open the tree

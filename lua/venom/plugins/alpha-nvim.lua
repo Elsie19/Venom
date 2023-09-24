@@ -2,7 +2,7 @@ return {
 	"goolord/alpha-nvim",
 	config = function()
 		local alpha = require("alpha")
-		local startify = require("alpha.themes.startify")
+		local startify = require("alpha.themes.dashboard")
 		startify.section.header.val = {
 			[[       ---_ ......._-_--.]],
 			[[      (|\ /      / /| \  \]],
